@@ -1,0 +1,48 @@
+body, html{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    padding: 0
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: orange;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    background-image: 
+}
+
+.headerTitle{
+    font-family: cursive;
+    font-size: 45px;
+    padding: 10px;
+}
+
+.headerButtons{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.headerButton{
+    background-color: orange;
+    width: 130px;
+    height: 100%;
+    font-size: 20px;
+    border: 0;
+}
