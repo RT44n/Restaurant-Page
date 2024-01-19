@@ -8,6 +8,7 @@ module.exports = {
     homeButton: "./src/homeButton.js",
     removeDivs: "./src/removeDivs.js",
     menuButton: "./src/menuButton.js",
+    contactButton: "./src/contactButton.js",
   },
   devtool: "inline-source-map",
   plugins: [
@@ -26,6 +27,11 @@ module.exports = {
         test: /\.css$/i,
 
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+
+        type: "asset/resource",
       },
     ],
   },

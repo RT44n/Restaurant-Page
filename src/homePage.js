@@ -2,6 +2,7 @@ import "./index.css";
 import { homeBtn } from "./homeButton";
 import { removeDivs } from "./removeDivs";
 import { menuBtn } from "./menuButton";
+import { contactBtn } from "./contactButton";
 
 function homePage() {
   const content = document.createElement("div");
@@ -38,14 +39,17 @@ function homePage() {
     menuBtn();
   });
   menuButton.classList.toggle("headerButton");
-  const aboutButton = document.createElement("button");
-  aboutButton.textContent = "About Us";
-  aboutButton.classList.toggle("headerButton");
+
   const contactButton = document.createElement("button");
   contactButton.textContent = "Contact Us";
   contactButton.classList.toggle("headerButton");
+  contactButton.addEventListener("click", () => {
+    removeDivs();
+    contactBtn();
+  });
 
-  headerButtons.append(homeButton, menuButton, aboutButton, contactButton);
+  headerButtons.append(homeButton, menuButton, contactButton);
+  homeBtn();
 }
 
 export { homePage };
