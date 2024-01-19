@@ -6,6 +6,8 @@ module.exports = {
     index: "./src/index.js",
     homePage: "./src/homePage.js",
     homeButton: "./src/homeButton.js",
+    removeDivs: "./src/removeDivs.js",
+    menuButton: "./src/menuButton.js",
   },
   devtool: "inline-source-map",
   plugins: [

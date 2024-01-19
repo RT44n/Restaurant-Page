@@ -1,5 +1,7 @@
 import "./index.css";
-import { homeButton } from "./homeButton";
+import { homeBtn } from "./homeButton";
+import { removeDivs } from "./removeDivs";
+import { menuBtn } from "./menuButton";
 
 function homePage() {
   const content = document.createElement("div");
@@ -8,7 +10,10 @@ function homePage() {
 
   const header = document.createElement("div");
   header.classList.toggle("header");
-  content.append(header);
+  const main = document.createElement("div");
+  main.classList.toggle("main");
+
+  content.append(header, main);
 
   const headerTitle = document.createElement("div");
   headerTitle.classList.toggle("headerTitle");
@@ -19,10 +24,19 @@ function homePage() {
 
   const homeButton = document.createElement("button");
   homeButton.textContent = "Home";
-  homeButton.addEventListener("click", console.log("hallo"));
+  homeButton.addEventListener("click", () => {
+    removeDivs();
+    homeBtn();
+  });
+
   homeButton.classList.toggle("headerButton");
   const menuButton = document.createElement("button");
   menuButton.textContent = "Menu";
+  menuButton.classList.toggle("menuBtn");
+  menuButton.addEventListener("click", () => {
+    removeDivs();
+    menuBtn();
+  });
   menuButton.classList.toggle("headerButton");
   const aboutButton = document.createElement("button");
   aboutButton.textContent = "About Us";
@@ -33,4 +47,5 @@ function homePage() {
 
   headerButtons.append(homeButton, menuButton, aboutButton, contactButton);
 }
+
 export { homePage };
